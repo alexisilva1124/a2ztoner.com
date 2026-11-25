@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A2Z Toner | Office Services</title>
+<meta name="description" content="A2Z Toner Office Services provides service for all brands of copiers, laser printers, DesignJet printers and barcode printers. Serving Riverside, LA, San Bernardino and Orange County.">
+<style>
+  :root {
+    --blue: #0a4fc0;
+    --blue-dark: #0b2d75;
+    --blue-light: #e8f0fc;
+    --red: #d01c24;
+    --green: #2e9b3e;
+    --ink: #1a1f36;
+    --muted: #5a6178;
+    --white: #ffffff;
+    --c: #00aeef; --m: #ec008c; --y: #ffd400; --k: #222;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--white);
+    border-bottom: 4px solid var(--blue);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: block; line-height: 0; }
+  .logo img { height: 62px; width: auto; }
+  nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+  nav a { text-decoration: none; font-weight: 600; color: var(--blue-dark); }
+  nav a:hover { color: var(--red); }
+  .nav-call {
+    background: var(--red); color: var(--white) !important;
+    padding: 8px 16px; border-radius: 6px;
+  }
+  .nav-call:hover { background: #a8141b; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: var(--white);
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -120px; bottom: -160px;
+    width: 520px; height: 520px; border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.06);
+  }
+  .hero .wrap { padding-top: 56px; padding-bottom: 80px; position: relative; z-index: 1; }
+  .hero-brand {
+    display: block; width: fit-content; max-width: 100%; margin-bottom: 28px;
+    background: var(--white); padding: 24px 34px 0; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+  }
+  .hero-brand img { display: block; width: 560px; max-width: 100%; height: auto; margin-bottom: 22px; }
+  .hero-brand .stripe { margin: 0 -34px; height: 8px; }
+  .badge {
+    display: inline-block; background: var(--red); color: var(--white);
+    font-weight: 800; font-style: italic; letter-spacing: 0.5px;
+    padding: 6px 18px; border-radius: 4px; transform: skew(-8deg);
+    margin-bottom: 20px;
+  }
+  .badge span { display: inline-block; transform: skew(8deg); }
+  .est {
+    font-size: 14px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+    color: #ffd9db; margin: -6px 0 14px;
+  }
+  .hero h1 { text-wrap: balance; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.1; font-style: italic; }
+  .hero h1 em { color: #ffd9db; font-style: italic; }
+  .hero p { font-size: 20px; max-width: 620px; margin: 18px 0 32px; opacity: 0.92; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700;
+    padding: 14px 26px; border-radius: 8px; font-size: 17px;
+    border: 2px solid transparent; cursor: pointer;
+  }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: #a8141b; }
+  .btn-outline { border-color: var(--white); color: var(--white); }
+  .btn-outline:hover { background: var(--white); color: var(--blue); }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-title { font-size: 34px; font-weight: 900; color: var(--blue); margin-bottom: 8px; }
+  .section-lead { color: var(--muted); font-size: 18px; margin-bottom: 36px; max-width: 640px; }
+  .bar { width: 64px; height: 5px; background: var(--red); border-radius: 3px; margin-bottom: 16px; }
+
+  /* Services */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--white); border: 1px solid #dde3f3; border-top: 5px solid var(--blue);
+    border-radius: 10px; padding: 26px 22px;
+  }
+  .grid.equip { grid-template-columns: repeat(4, 1fr); }
+  .grid.svc { grid-template-columns: repeat(3, 1fr); }
+  .sub-title { font-size: 26px; font-weight: 900; color: var(--blue); margin: 48px 0 20px; }
+  @media (max-width: 900px) { .grid.equip, .grid.svc { grid-template-columns: repeat(2, 1fr); } }
+  .card .icon { font-size: 34px; margin-bottom: 10px; }
+  .card h3 { color: var(--blue-dark); font-size: 20px; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 15px; }
+  .card.green { border-top-color: var(--green); }
+  .card.green h3 { color: var(--green); }
+
+  /* About */
+  .about { background: var(--blue-light); }
+  .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  .about p { margin-bottom: 14px; font-size: 17px; }
+  .areas {
+    background: var(--white); border-radius: 12px; padding: 28px;
+    border-left: 6px solid var(--red);
+  }
+  .areas h3 { color: var(--blue); margin-bottom: 12px; }
+  .areas ul { list-style: none; }
+  .areas li { padding: 8px 0; border-bottom: 1px solid #eef1f8; font-weight: 600; }
+  .areas li:last-child { border-bottom: 0; }
+  .areas li::before { content: "📍 "; }
+
+  .van { grid-column: 1 / -1; margin: 12px auto 0; width: 100%; max-width: 820px; }
+  .van img {
+    display: block; width: 100%; height: auto; aspect-ratio: 768 / 400; object-fit: cover; object-position: left center;
+    border-radius: 14px; border: 6px solid var(--white);
+    box-shadow: 0 14px 34px rgba(20,44,128,0.18);
+  }
+  .van figcaption { text-align: center; color: var(--blue-dark); font-weight: 700; margin-top: 12px; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; }
+  .contact-info { display: flex; flex-direction: column; gap: 16px; }
+  .info-item {
+    display: flex; align-items: center; gap: 16px; text-decoration: none;
+    background: var(--blue); color: var(--white);
+    padding: 18px 20px; border-radius: 10px;
+  }
+  .info-item:hover { background: var(--blue-dark); }
+  .info-item .ic {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--white); color: var(--blue);
+    display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;
+  }
+  .info-item small { display: block; opacity: 0.8; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  .info-item strong { font-size: 19px; }
+  form {
+    background: var(--white); border: 1px solid #dde3f3; border-radius: 12px; padding: 28px;
+    box-shadow: 0 8px 24px rgba(29,63,174,0.08);
+  }
+  form h3 { color: var(--blue); margin-bottom: 16px; font-size: 22px; }
+  label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--blue-dark); }
+  input, textarea, select {
+    width: 100%; padding: 12px 14px; border: 1.5px solid #cfd7ee; border-radius: 8px;
+    font: inherit; margin-bottom: 16px; background: #fbfcff;
+  }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--blue); background: var(--white); }
+  textarea { min-height: 120px; resize: vertical; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  form .btn { width: 100%; border: 0; }
+  .form-note { font-size: 13px; color: var(--muted); margin-top: 10px; text-align: center; }
+
+  /* Footer */
+  footer { background: var(--blue-dark); color: rgba(255,255,255,0.85); padding: 28px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .stripe { height: 6px; background: linear-gradient(90deg, var(--c) 0 25%, var(--m) 25% 50%, var(--y) 50% 75%, var(--k) 75%); }
+
+  section[id] { scroll-margin-top: 90px; }
+
+  @media (max-width: 800px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+    .row { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 18px; }
+    .nav { height: auto; flex-wrap: wrap; padding-top: 10px; }
+    nav { display: contents; }
+    nav ul { display: contents; }
+    nav ul li:last-child { order: 1; }
+    nav ul li:not(:last-child) { order: 2; flex: 1 1 30%; text-align: center; }
+    nav ul li:not(:last-child) a {
+      display: block; padding: 10px 0; margin-top: 10px;
+      border-top: 1px solid #e3e8f5; font-size: 15px;
+    }
+    .nav-call { font-size: 15px; padding: 8px 12px; white-space: nowrap; }
+    .logo img { height: 46px; }
+    section[id] { scroll-margin-top: 120px; }
+
+    .hero .wrap { padding-top: 36px; padding-bottom: 48px; }
+    .hero-brand { margin-bottom: 22px; padding: 16px 18px 0; border-radius: 12px; }
+    .hero-brand img { margin-bottom: 14px; }
+    .hero-brand .stripe { margin: 0 -18px; height: 6px; }
+    .hero p { font-size: 17px; margin: 14px 0 26px; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions .btn { text-align: center; }
+
+    section { padding: 52px 0; }
+    .section-title { font-size: 28px; }
+    .section-lead { font-size: 16px; margin-bottom: 26px; }
+    .grid, .grid.equip, .grid.svc { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .sub-title { font-size: 22px; margin-top: 36px; }
+    .card { padding: 18px 14px; }
+    .card .icon { font-size: 28px; }
+    .card h3 { font-size: 17px; }
+    .card p { font-size: 14px; }
+    .about p { font-size: 16px; }
+    .areas, form { padding: 22px 18px; }
+    .info-item strong { font-size: 17px; word-break: break-word; }
+    footer .wrap { flex-direction: column; text-align: center; align-items: center; }
+  }
+
+  @media (max-width: 360px) {
+    .grid, .grid.equip, .grid.svc { grid-template-columns: 1fr; }
+    .logo img { height: 40px; }
+    .nav-call { font-size: 13px; padding: 7px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="A2Z Toner home">
+      <img src="images/logo.png" alt="A2Z Toner Office Services" width="940" height="323">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+16268108464" class="nav-call">📞 (626) 810-8464</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-brand">
+        <img src="images/logo.png" alt="A2Z Toner Office Services" width="940" height="323">
+        <div class="stripe"></div>
+      </div>
+      <div class="badge"><span>Service All Brands</span></div>
+      <div class="est">Established 1999</div>
+      <h1>Copier &amp; Printer Service You Can Count On.</h1>
+      <p>A2Z Toner Office Services keeps your office running. We service, supply and maintain copiers, laser printers, DesignJet printers and barcode printers of all brands.</p>
+      <div class="hero-actions">
+        <a href="tel:+16268108464" class="btn btn-red">Call (626) 810-8464</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="bar"></div>
+      <h2 class="section-title">What We Service</h2>
+      <p class="section-lead">From the front-office copier to the warehouse label printer, we work on all major brands.</p>
+      <div class="grid equip">
+        <div class="card"><div class="icon">🖨️</div><h3>Copiers</h3><p>Multifunction office copiers, all makes and models.</p></div>
+        <div class="card"><div class="icon">🖨</div><h3>Laser Printers</h3><p>Desktop and workgroup laser printers, color and black &amp; white.</p></div>
+        <div class="card"><div class="icon">📐</div><h3>DesignJet Printers</h3><p>Wide-format plotters for plans, drawings and large prints.</p></div>
+        <div class="card"><div class="icon">🏷️</div><h3>Barcode Printers</h3><p>Label and barcode printers for shipping, retail and warehouses.</p></div>
+      </div>
+
+      <h3 class="sub-title">Our Services</h3>
+      <div class="grid svc">
+        <div class="card"><div class="icon">🔧</div><h3>Printer &amp; Copier Service</h3><p>Fast diagnosis and repair to get your machines back up and running.</p></div>
+        <div class="card"><div class="icon">🖋️</div><h3>Toner &amp; Supplies</h3><p>Toner, ink, drums and other supplies for all brands, delivered.</p></div>
+        <div class="card"><div class="icon">🗓️</div><h3>Preventive Maintenance</h3><p>Scheduled cleanings and checkups that stop problems before they start.</p></div>
+        <div class="card"><div class="icon">⚙️</div><h3>Parts &amp; Repairs</h3><p>Replacement parts and repairs for copiers and printers.</p></div>
+        <div class="card"><div class="icon">🚐</div><h3>On-Site Support</h3><p>Our mobile techs come to your office, so you don't have to haul equipment.</p></div>
+        <div class="card green"><div class="icon">♻️</div><h3>E-Waste Management</h3><p>Responsible disposal and recycling of old office equipment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="bar"></div>
+        <h2 class="section-title">About A2Z Toner</h2>
+        <p>Established in 1999, A2Z Toner Office Services is a local, mobile service company serving businesses across Southern California. We come to you to keep your printing equipment working, whatever the brand.</p>
+        <p>We service copiers, laser printers, DesignJet printers and barcode printers, and we help you get rid of old equipment the right way through our e-waste management service.</p>
+      </div>
+      <div class="areas">
+        <h3>Areas We Serve</h3>
+        <ul>
+          <li>Riverside</li>
+          <li>Los Angeles</li>
+          <li>San Bernardino</li>
+          <li>Orange County</li>
+        </ul>
+      </div>
+      <figure class="van">
+        <img src="images/van.jpg" alt="The A2Z Toner service van, a white Ford Transit Connect with the blue and red A2Z Toner Office Services wrap" width="768" height="400" loading="lazy">
+        <figcaption>Look for our van around Southern California.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="bar"></div>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-lead">Call, email, or send us a message and we'll get back to you.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="tel:+16268108464" class="info-item">
+            <div class="ic">📞</div>
+            <div><small>Phone</small><strong>(626) 810-8464</strong></div>
+          </a>
+          <a href="mailto:info@A2ZToner.com" class="info-item">
+            <div class="ic">✉️</div>
+            <div><small>Email</small><strong>info@A2ZToner.com</strong></div>
+          </a>
+          <a href="https://www.A2ZToner.com" class="info-item">
+            <div class="ic">🌐</div>
+            <div><small>Website</small><strong>www.A2ZToner.com</strong></div>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=1245+S+La+Brea+Ave,+Inglewood,+CA+90301" target="_blank" rel="noopener" class="info-item">
+            <div class="ic">📍</div>
+            <div><small>Address</small><strong>1245 S La Brea Ave<br>Inglewood, CA 90301</strong></div>
+          </a>
+        </div>
+
+        <form id="contactForm">
+          <h3>Send Us a Message</h3>
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel">
+            </div>
+          </div>
+          <label for="email">Your Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Copier</option>
+            <option>Laser Printer</option>
+            <option>DesignJet Printer</option>
+            <option>Barcode Printer</option>
+            <option>Toner &amp; Supplies</option>
+            <option>Preventive Maintenance</option>
+            <option>Parts &amp; Repairs</option>
+            <option>E-Waste Pickup</option>
+            <option>Other</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="btn btn-red">Send Message</button>
+          <p class="form-note">Opens your email app with your message addressed to info@A2ZToner.com.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="stripe"></div>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> A2Z Toner Office Services · Est. 1999</span>
+    <span>1245 S La Brea Ave, Inglewood, CA 90301</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const f = e.target;
+    const subject = 'Service Request: ' + f.service.value + ' from ' + f.name.value;
+    const body =
+      'Name: ' + f.name.value + '\n' +
+      'Phone: ' + f.phone.value + '\n' +
+      'Email: ' + f.email.value + '\n' +
+      'Service: ' + f.service.value + '\n\n' +
+      f.message.value;
+    window.location.href = 'mailto:info@A2ZToner.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
